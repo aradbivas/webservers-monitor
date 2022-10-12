@@ -1,0 +1,216 @@
+{
+	"info": {
+		"_postman_id": "84d9a50c-2e3f-4c89-9f89-b6626bccbdfd",
+		"name": "webserver",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20189068"
+	},
+	"item": [
+		{
+			"name": "http://localhost:3000/api/webserver/allservers",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MzEzNjc2OTJjNTU5Y2FkMjYwMzY4N2UiLCJlbWFpIjoiYTJzYUBnbWFpbC5jb20iLCJyb2xlIjoidXNlciIsImlhdCI6MTY2MjIxNjA0MSwiZXhwIjoxNjYyMjE5NjQxfQ.Ivr1lvN19dBO2bFJAhiAt2-pC_X9Fgtm6mJpks4Fxqg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiQXJhZCIsInBhc3N3b3JkIjoicGFzc3dvcmQiLCJpYXQiOjE2NjEwMDg3NzMsImV4cCI6MTY2MTAwODgzM30.3Nk2syxpPD8lfAxY_iJyu6EPTGyl4JiCueLgVftkKVQ",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"barbersName\": \"Arad\",\r\n    \"day\":\"25\",\r\n    \"month\":\"8\",\r\n    \"year\":\"20022\",\r\n    \"startingTime\":\"08:40\",\r\n    \"endingTime\":\"08:45\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/webserver/allservers",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"webserver",
+						"allservers"
+					]
+				},
+				"description": "Get a list of all the webservers"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/api/webserver/createwebserver",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"google2\",\r\n    \"url\":\"www.google2.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/webserver/createwebserver",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"webserver",
+						"createwebserver"
+					]
+				},
+				"description": "Create a new Webserver"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/api/webserver/deleteserver/google2",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/webserver/deleteserver/google2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"webserver",
+						"deleteserver",
+						"google2"
+					]
+				},
+				"description": "Delete a webserver from the DB"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/api/webserver/serverdetails/google",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"google\",\r\n    \"url\":\"www.google.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/webserver/serverdetails/google",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"webserver",
+						"serverdetails",
+						"google"
+					]
+				},
+				"description": "Get server deatils from a specific webserver"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/api/webserver/serverhistory/google",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"google\",\r\n    \"url\":\"www.google.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/webserver/serverhistory/google",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"webserver",
+						"serverhistory",
+						"google"
+					]
+				},
+				"description": "Get all request histroy for specific webserver"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:3000/api/webserver/updateserver",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"googlea\",\r\n    \"newName\":\"google\",\r\n    \"newUrl\":\"www.google.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/webserver/updateserver",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"webserver",
+						"updateserver"
+					]
+				},
+				"description": "Update a webserver"
+			},
+			"response": []
+		}
+	]
+}
