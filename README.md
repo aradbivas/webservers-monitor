@@ -5,6 +5,7 @@ Automated Worker sends a request to the webservers urls to and saves the info th
 
 Using MYSQL DB.
 
+
     1.Clone this repository.
 
     2.NPM Install.
@@ -12,3 +13,5 @@ Using MYSQL DB.
     3.Configore databse.js with username and password.
 
     4.Node index.js to start the server.
+    
+ Import webserver.postman_collection.json to Postman to sends requests to the API.
